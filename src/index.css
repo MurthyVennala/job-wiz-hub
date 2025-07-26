@@ -2,41 +2,101 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* FreeJobAlert Design System - Professional Government Job Portal
+Colors inspired by official government websites with modern UI/UX
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Core background and text */
+    --background: 0 0% 98%;
+    --foreground: 215 20% 15%;
 
+    /* Card and surface colors */
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 215 20% 15%;
 
+    /* Popover and dropdown colors */
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 215 20% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary blue - Government portal style */
+    --primary: 210 85% 42%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 85% 95%;
+    --primary-dark: 210 85% 35%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary grays */
+    --secondary: 210 25% 96%;
+    --secondary-foreground: 215 20% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted colors for subtle text and backgrounds */
+    --muted: 210 25% 94%;
+    --muted-foreground: 215 15% 55%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent colors - Orange for highlights */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --accent-light: 25 95% 95%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Success and notification colors */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 142 76% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Warning colors */
+    --warning: 48 96% 53%;
+    --warning-foreground: 48 96% 15%;
+    --warning-light: 48 96% 95%;
 
-    --radius: 0.5rem;
+    /* Destructive/error colors */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Border and input styling */
+    --border: 210 25% 88%;
+    --input: 210 25% 94%;
+    --ring: 210 85% 42%;
+
+    /* Border radius for modern look */
+    --radius: 8px;
+
+    /* Header colors */
+    --header-bg: 215 25% 27%;
+    --header-foreground: 0 0% 100%;
+
+    /* Navigation colors */
+    --nav-bg: 210 85% 42%;
+    --nav-foreground: 0 0% 100%;
+    --nav-hover: 210 85% 48%;
+
+    /* WhatsApp green */
+    --whatsapp: 142 70% 49%;
+    --whatsapp-foreground: 0 0% 100%;
+
+    /* Job category colors */
+    --bank-job: 210 85% 42%;
+    --railway-job: 142 76% 36%;
+    --teaching-job: 25 95% 53%;
+    --engineering-job: 271 81% 56%;
+    --police-job: 0 84% 60%;
+    --medical-job: 195 100% 39%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 85% 42%), hsl(210 85% 55%));
+    --gradient-success: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 49%));
+    --gradient-accent: linear-gradient(135deg, hsl(25 95% 53%), hsl(25 95% 66%));
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(210 25% 88% / 0.1);
+    --shadow-md: 0 4px 6px -1px hsl(210 25% 88% / 0.1), 0 2px 4px -1px hsl(210 25% 88% / 0.06);
+    --shadow-lg: 0 10px 15px -3px hsl(210 25% 88% / 0.1), 0 4px 6px -2px hsl(210 25% 88% / 0.05);
+    --shadow-xl: 0 20px 25px -5px hsl(210 25% 88% / 0.1), 0 10px 10px -5px hsl(210 25% 88% / 0.04);
+
+    /* Animations */
+    --transition-fast: all 0.15s ease-in-out;
+    --transition-base: all 0.3s ease-in-out;
+    --transition-slow: all 0.5s ease-in-out;
 
     --sidebar-background: 0 0% 98%;
 
@@ -56,41 +116,46 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Dark mode colors - keeping government professional look */
+    --background: 215 25% 12%;
+    --foreground: 210 25% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 215 25% 15%;
+    --card-foreground: 210 25% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 215 25% 15%;
+    --popover-foreground: 210 25% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 210 85% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 215 25% 18%;
+    --secondary-foreground: 210 25% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 25% 18%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 25 95% 60%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
+    --border: 215 25% 25%;
+    --input: 215 25% 18%;
+    --ring: 210 85% 55%;
+
+    --header-bg: 215 25% 8%;
+    --nav-bg: 210 85% 45%;
+
+    --sidebar-background: 215 25% 10%;
+    --sidebar-foreground: 210 25% 90%;
+    --sidebar-primary: 210 85% 55%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-accent: 215 25% 18%;
+    --sidebar-accent-foreground: 210 25% 90%;
+    --sidebar-border: 215 25% 25%;
+    --sidebar-ring: 210 85% 55%;
   }
 }
 
@@ -100,6 +165,132 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-secondary;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/50 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/70;
+  }
+}
+
+@layer components {
+  /* Government style header */
+  .gov-header {
+    background: hsl(var(--header-bg));
+    color: hsl(var(--header-foreground));
+  }
+
+  /* Navigation styling */
+  .gov-nav {
+    background: var(--gradient-primary);
+    color: hsl(var(--nav-foreground));
+  }
+
+  /* Job category cards */
+  .job-category-card {
+    @apply rounded-lg p-4 text-center transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* WhatsApp button styling */
+  .whatsapp-btn {
+    background: hsl(var(--whatsapp));
+    color: hsl(var(--whatsapp-foreground));
+    @apply rounded-full px-4 py-2 font-medium transition-all duration-300 hover:scale-105;
+  }
+
+  /* Notification badge */
+  .notification-badge {
+    @apply inline-flex items-center rounded-full bg-destructive px-2 py-1 text-xs font-medium text-destructive-foreground;
+  }
+
+  /* Job card styling */
+  .job-card {
+    @apply rounded-lg border bg-card p-4 shadow-sm transition-all duration-300 hover:shadow-md;
+  }
+
+  /* Modern button variants */
+  .btn-government {
+    background: var(--gradient-primary);
+    color: hsl(var(--primary-foreground));
+    @apply rounded-lg px-6 py-3 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-accent {
+    background: var(--gradient-accent);
+    color: hsl(var(--accent-foreground));
+    @apply rounded-lg px-6 py-3 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  .btn-success {
+    background: var(--gradient-success);
+    color: hsl(var(--success-foreground));
+    @apply rounded-lg px-6 py-3 font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg;
+  }
+
+  /* State selector */
+  .state-btn {
+    @apply rounded-md bg-primary/10 px-3 py-2 text-sm font-medium text-primary transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
+  }
+
+  /* Animated elements */
+  .fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+  }
+
+  .slide-up {
+    animation: slideUp 0.6s ease-in-out;
+  }
+
+  .pulse-glow {
+    animation: pulseGlow 2s infinite;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px hsl(var(--primary) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px hsl(var(--primary) / 0.8);
   }
 }
